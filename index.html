@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Shobhit Bhatt">
+        <meta name="description" content="A perspective to life">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="copyright" content="Shobhit Bhatt">
+
+        <title>Shobhit Bhatt</title>
+        <link rel="icon" type="image/png" href="./resources/icons/favicon.png">
+
+        <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+        <link href="./resources/css/rwd.css" type="text/css" rel="stylesheet">
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=IM+Fell+DW+Pica&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <a href="#home" class="logo">Shobhit Bhatt</a>
+            <div class="toggle" onclick="openMenu();"></div>
+            <nav class="menu-bar">
+                <a href="#home" onclick="closeMenu();"><img src="./resources/icons/home.png" alt="home"> <span>Home</span></a>
+                <a href="#about" onclick="closeMenu();"><img src="./resources/icons/about.png" alt="about"> <span>About</span></a>
+                <a href="#work" onclick="closeMenu();"><img src="./resources/icons/work.png" alt="work"> <span>Work</span></a>
+                <a href="#contact" onclick="closeMenu();"><img src="./resources/icons/contact.png" alt="contact"> <span>Contact</span></a>
+            </nav>
+        </header>
+        <main>
+            <section class="homepage full-page" id="home">
+                <div class="home-text-container">
+                    <div class="typing-text">
+                        <div class="static-text">
+                            नमस्ते 🙏 I am,<br><strong>Shobhit Bhatt</strong>
+                        </div>
+                        <div class="dynamic-text">
+                            <span id="change-text">Coding Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+                <figure class="figure">
+                    <img src="./resources/images/shobhit.jpg" alt="Shobhit Bhatt">
+                </figure>
+            </section>
+            <section class="about-me full-page" id="about">
+                <div class="heading">
+                    <h1>ABOUT</h1>
+                    <h3>Know Me</h3>
+                </div>
+                <div class="description">
+                    <div class="content">
+                        <p>I am currently an undergrad student at Bipin Tripathi Kumaon Institute of Technology with majors in 
+                            Computer Science and Engineering.<br><br>A learner trying hands on skills around me and looking forward 
+                            to grab great opportunities.<br><br>To know more, check me out on various platforms.<br>
+                        </p>
+                        <ul class="social-links">
+                            <li><a target="_blank" href="mailto:shobhit.bhatt.14@gmail.com"><img src="./resources/icons/mail-s.png" alt="E-mail"></a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/shobhit-bhatt"><img src="./resources/icons/linkedin-s.png" alt="LinkedIn"></a></li>
+                            <li><a target="_blank" href="https://github.com/shobhit-bhatt-14"><img src="./resources/icons/github-s.png" alt="Github"></a></li>
+                            <li><a target="_blank" href="https://twitter.com/shobhitbhatt_"><img src="./resources/icons/twitter-s.png" alt="Twitter"></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/_shobhit_bhatt_"><img src="./resources/icons/instagram-s.png" alt="Instagram"></a></li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <h4>Tech Stack</h4>
+                    </div>
+                    <div class="tech-container">
+                        <div class="tech-box">
+                            <img class="tech-icon" src="resources/icons/c.png">
+                            <h3>C</h3>
+                        </div>
+                        <div class="tech-box">
+                            <img class="tech-icon" src="./resources/icons/c++.png">
+                            <h3>C++</h3>
+                        </div>
+                        <div class="tech-box">
+                            <img class="tech-icon" src="./resources/icons/html.png">
+                            <h3>HTML</h3>
+                        </div>
+                        <div class="tech-box">
+                            <img class="tech-icon" src="./resources/icons/css.png">
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="tech-box">
+                            <img class="tech-icon" src="./resources/icons/python.png">
+                            <h3>Python</h3>
+                        </div>
+                        <div class="tech-box">
+                            <img class="tech-icon" src="./resources/icons/javascript.png">
+                            <h3>JavaScript</h3>
+                        </div>
+                        <div class="tech-box">
+                            <img class="tech-icon" src="./resources/icons/git.png">
+                            <h3>Git</h3>
+                        </div>
+                        <div class="tech-box">
+                            <img class="tech-icon" src="./resources/icons/vs-code.png">
+                            <h3>VS&nbspCode</h3>
+                        </div>
+                        <div class="tech-box">
+                            <img class="tech-icon" src="./resources/icons/wordpress.png">
+                            <h3>WordPress</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="work-me full-page" id="work">
+                <div class="heading">
+                    <h1>WORK</h1>
+                    <h3>Get updates</h3>
+                </div>
+                <div class="work-view">
+                    <div class="work-card">
+                        <div class="card-front">
+                            <img src="./resources/images/perplexed.jpeg" alt="Perplexed">
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>Perplexed</h3>
+                                <p>Have a <a target="_blank" href="https://perplexed.ml">look</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="card-front">
+                            <img src="./resources/images/start-python.png" alt="Python">
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>Fundamentals<br>of Python</h3>
+                                <p>Have a <a target="_blank" href="https://github.com/shobhit-bhatt-14/Getting-Started-with-Python">look</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="card-front">
+                            <img src="./resources/images/coding.jpg" alt="Coding">
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>Coding</h3>
+                                <p>Have a <a target="_blank" href="https://www.codechef.com/users/code_next">look</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-updates">
+                    <p>To get more of my work updates follow me on <a target="_blank" href="">Github</a>.</p>
+                </div>
+            </section>
+            <section class="contact-me" id="contact">
+                <div class="heading">
+                    <h1>CONTACT</h1>
+                    <h3>Get in Touch</h3>
+                </div>
+                <div class="content">
+                    <p>Feel free to contact me.<br>My inbox is always open.</p>
+                    <ul class="social-links">
+                        <li><a target="_blank" href="mailto:shobhit.bhatt.14@gmail.com"><img src="./resources/icons/mail-s.png" alt="E-mail"></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/shobhit-bhatt"><img src="./resources/icons/linkedin-s.png" alt="LinkedIn"></a></li>
+                        <li><a target="_blank" href="https://github.com/shobhit-bhatt-14"><img src="./resources/icons/github-s.png" alt="Github"></a></li>
+                        <li><a target="_blank" href="https://twitter.com/shobhitbhatt_"><img src="./resources/icons/twitter-s.png" alt="Twitter"></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/_shobhit_bhatt_"><img src="./resources/icons/instagram-s.png" alt="Instagram"></a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="support" id="support">
+                <p>If you like my work, you can support to <a target="_blank" href="https://www.buymeacoffee.com/shobhitbhatt">buy me a coffee</a>.</p>
+            </section>
+            <a href="#home" class="scroll-up" id="scroll-up">
+                <img src="./resources/icons/scroll-up.png" alt="scroll-up">
+            </a>
+        </main>
+        <footer class="footer">
+            <p>Copyright &copy; 2021 | Made by Shobhit Bhatt</p>
+        </footer>
+        <script type="text/javascript">
+            // fixed header
+            window.addEventListener("scroll", () => {
+                const har = document.querySelector(".header");
+                har.classList.toggle("fix-h", window.scrollY > 0);
+            });
+
+            // changing text
+            const arr = ["&nbsp;&nbsp;&nbsp;&nbsp;Learner&nbsp;&nbsp;&nbsp;&nbsp;", "Tech Enthusiast", "&nbsp;&nbsp;&nbsp;&nbsp;Mentor&nbsp;&nbsp;&nbsp;&nbsp;", "Coding Enthusiast"];
+            let changeText = (i) => {
+                if(arr.length > i) {
+                    setTimeout(() => {
+                        document.getElementById("change-text").innerHTML = arr[i];
+                        changeText(++i);
+                    }, 4000);
+                } else {
+                    changeText(0);
+                }
+            }
+            changeText(0);
+
+            // show scroll
+            window.addEventListener("scroll", () => {
+                const scrollUp = document.getElementById("scroll-up");
+                scrollUp.classList.toggle("show-scroll", window.scrollY > (window.innerHeight/2));
+            });
+
+            // menu bar
+            const menuOpen = document.querySelector(".toggle");
+            const menu = document.querySelector(".menu-bar");
+            let openMenu = () => {
+                menuOpen.classList.toggle("open");
+                menu.classList.toggle("show");
+            };
+            let closeMenu = () => {
+                menuOpen.classList.remove("open");
+                menu.classList.remove("show");
+            }
+
+            // mobile height variable
+            window.addEventListener("resize" , () => {
+                let vh = window.innerHeight/100;
+                document.documentElement.style.setProperty("--vh", `${vh}px`);
+            });
+        </script>
+    </body> 
+</html>

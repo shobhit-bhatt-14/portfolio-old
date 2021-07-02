@@ -1,0 +1,870 @@
+* {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    scroll-behavior: smooth;
+}
+body {
+    color: #000;
+    font-size: 4vh;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+main section > .heading {
+    line-height: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', serif;
+    padding: 5% 0 10% 0;
+    letter-spacing: 1vh;
+}
+section .heading > h1 {
+    font-size: 15vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration-line: overline;
+    color: #ddd;
+}
+section .heading > h3 {
+    font-size: 7vw;
+    text-transform: capitalize;
+    color: #000;
+    text-shadow: 1px 1px 0.5px #0ff, -1px -1px 0.5px #f00;
+    transform: perspective(500px) translateZ(1vw);
+}
+
+/* ----------Header------------ */
+header {
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 10%;
+    position: fixed;
+    background: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3.5% 5%;
+    z-index: 100;
+}
+header .logo {
+    font-size: 5vw;
+    color: #000;
+    text-decoration: none;
+    text-shadow: -1px -1px 1px #f00, 1px 1px 1px #0ff;
+    filter: invert(1);
+    align-self: center;
+}
+header .toggle {
+    height: 3vh;
+    width: 3vh;
+    background: url("../icons/menu-open.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: invert(1);
+    align-self: center;
+}
+header.fix-h {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3.5% 5%;
+    position: fixed;
+    background: #fff;
+    z-index: 100;
+    border-bottom: 1px solid #000;
+}
+header.fix-h .logo {
+    font-size: 5vw;
+    color: #000;
+    text-decoration: none;
+    text-shadow: -1px -1px 1px #f00, 1px 1px 1px #0ff;
+    filter: invert(0);
+}
+header.fix-h .toggle {
+    height: 3vh;
+    width: 3vh;
+    background: url("../icons/menu-open.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: invert(0);
+}
+header .toggle.open {
+    height: 3vh;
+    width: 3vh;
+    background: url("../icons/menu-close.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header .menu-bar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #ff0;
+    top: 10%;
+    left: -100%;
+    transition: 0.5s;
+    padding: 25vh 0 0 0;
+    z-index: 99;
+}
+.menu-bar.show {
+    left: 0;
+}
+.menu-bar a {
+    display: inline-flex;
+    width: 100vw;
+    max-height: 6vh;
+    padding-top: 2.5vh;
+    justify-content: center;
+    color: #111;
+}
+.menu-bar a span {
+    min-width: 20vw;
+    padding-left: 2vw;
+    font-size: 5vw;
+    font-weight: 500;
+    align-self: center;
+}
+.menu-bar a img {
+    filter: invert(0);
+    align-self: center;
+    height: 7.5vw;
+    width: 7.5vw;
+}
+
+/* -----------Home------------ */
+main section.homepage {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30% 0 10% 0;
+    background: #343f4f;
+    top: 10%;
+}
+.home-text-container, .typing-text {
+    min-width: 100%;
+    text-align: center;
+}
+.home-text-container .typing-text .static-text {
+    font-size: 3.5vh;
+    line-height: 10vh;
+    color: #fff;
+}
+.home-text-container .typing-text .static-text > strong {
+    font-size: 5vh;
+    color: #000;
+    text-shadow: -1px -1px 2px #f00, 1px 1px 2px #0ff;
+}
+.home-text-container .typing-text .dynamic-text {
+    height: 6vh;
+    width: 100%;
+    color: #fc6d6d;
+    overflow: hidden;
+}
+.typing-text .dynamic-text span {
+    width: 100%;
+    position: relative;
+    font-size: 4vh;
+    top: 0;
+}
+.typing-text .dynamic-text span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    line-height: 10vh;
+    height: 100%;
+    background: #343f4f;
+    border-left: 2px solid #fc6d6d;
+    animation: m-slide 4s steps(120) infinite;
+}
+@keyframes m-slide {
+    45% {
+        left: 100%;
+    }
+    55% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+.homepage figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25%;
+}
+.homepage figure img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* ------------About Me--------- */
+main section.about-me {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40% 0 0 0;
+}
+.about-me .description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+.about-me .description .content {
+    width: 95%;
+    padding: 5% 0 5% 0;
+}
+.about-me .description .content p {
+    padding: 0 7vw;
+    font-size: 4.5vw;
+}
+.about-me .description .content ul.social-links {
+    margin: 0;
+    padding: 5vh 0;
+    gap: 2vw;
+    list-style: none;
+    text-align: center;
+}
+.about-me .description .content ul.social-links li {
+    display: inline;
+}
+.about-me .description .content ul.social-links li a img {
+    height: 15vw;
+    width: 15vw;
+}
+.about-me .description .tech-stack {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+.about-me .description .tech-stack h4 {
+    font-size: 7vw;
+    text-align: center;
+    text-shadow: 0 0 2px #ff0;
+}
+.about-me .description .tech-container {
+    display: grid;
+    grid-template: 10vw 10vw 10vw 10vw 10vw/ 40vw 40vw;
+    gap: 2vw;
+    padding: 5% 0 0 0;
+    align-self: center;
+}
+.about-me .description .tech-container .tech-box {
+    background: #f2f4f4;
+    padding: 0 2vw;
+    display: inline-flex;
+    align-items: center;
+}
+.about-me .description .tech-container .tech-box img {
+    height: 8vw;
+    width: 8vw;
+}
+.about-me .description .tech-container .tech-box h3 {
+    font-size: 4vw;
+    padding: 0 0 0 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -------------Work----------- */
+main section.work-me {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40% 0 0 0;
+}
+.work-me .work-view {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 7.5vh;
+    margin: 5% auto;
+}
+.work-me .work-view .work-card {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background: #eee;
+    padding: 5% 0 0 0;
+}
+.work-me .work-view .work-card .card-front {
+    width: 90%;
+    height: 50%;
+    overflow: hidden;
+}
+.work-me .work-view .work-card .card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5vw;
+}
+.work-me .work-view .work-card .card-back {
+    width: 90%;
+    height: 30%;
+    padding: 10% 0 0 0;
+}
+.work-me .work-view .work-card .card-back .back-content {
+    height: 100%;
+    width: 100%;
+}
+.work-me .work-view .work-card .card-back .back-content h3 {
+    font-size: 7vw;
+    text-decoration: underline;
+    text-align: center;
+    color: #000;
+}
+.work-me .work-view .work-card .card-back .back-content p {
+    font-size: 5vw;
+    text-align: center;
+    font-weight: 500;
+    color: #000;
+    padding: 10% 0 5% 0;
+}
+.work-me .work-view .work-card .card-back .back-content p a {
+    color: #00f;
+    text-shadow: 0px 0px 2px #f00;
+    font-weight: 700;
+}
+.work-me .more-updates {
+    width: 100%;
+    text-align: center;
+}
+.work-me .more-updates p {
+    width: 80%;
+    font-size: 4.5vw;
+    margin: auto;
+}
+
+/* --------------Contact---------- */
+main section.contact-me {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40% 0 0 0;
+    justify-content: center;
+}
+.contact-me .content {
+    width: 90%;
+}
+.contact-me .content p {
+    margin: 0;
+    width: 100%;
+    font-size: 6vw;
+    line-height: 10vw;
+    text-align: center;
+}
+.contact-me .content ul.social-links {
+    margin: 0;
+    padding: 5vh 0;
+    gap: 2vw;
+    list-style: none;
+    text-align: center;
+}
+.contact-me .content ul.social-links li {
+    display: inline;
+}
+.contact-me .content ul.social-links li a img {
+    height: 15vw;
+    width: 15vw;
+}
+
+section.support {
+    width: 100%;
+    padding: 0 2vw 6vw 2vw;
+}
+section.support p {
+    width: 90%;
+    text-align: center;
+    font-size: 2.5vh;
+    margin: auto;
+}
+
+/* ---------Scroll Up---------- */
+.scroll-up {
+    position: fixed;
+    right: 3vw;
+    bottom: -20vw;
+    transition: 0.5s;
+    height: 12vw;
+    width: 12%;
+}
+.show-scroll {
+    bottom: 15vw;
+    border-radius: 50%;
+}
+.scroll-up img {
+    border-radius: 50%;
+    background: #343f4f;
+    width: 100%;
+    height: 100%;
+    filter: opacity(0.6);
+}
+
+/* ---------Footer----------- */
+footer {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vw;
+}
+footer p {
+    color: #fff;
+    font-size: 4vw;
+    text-align: center;
+}
+
+/* ----------Media Queries------------ */
+@media screen and (min-width: 481px) {
+    header {
+        align-content: center;
+    }
+    header .logo {
+        font-size: 4vh;
+    }
+    header .toggle {
+        align-self: center;
+    }
+    header .menu-bar {
+        top: 10vh;
+    }
+    section.home {
+        padding: 20% 0;
+    }
+    .menu-bar a {
+        padding: 2% 0;
+    }
+    .menu-bar a span {
+        font-size: 80%;
+    }
+    .menu-bar a img {
+        height: 100%;
+        width: 4%;
+    }
+    main section.homepage {
+        padding: 20% 0;
+    }
+    .homepage figure {
+        padding: 10% 0;
+        margin: auto;
+    }
+    .homepage figure img{
+        width: 50%;
+    }
+    main section.about-me {
+        padding: 20% 0 0 0;
+    }
+    .about-me .description .content p {
+        font-size: 90%;
+    }
+    .about-me .description .content ul.social-links li a img {
+        height: 10%;
+        width: 10%;
+    }
+    .about-me .description .tech-container {
+        transform: scale(0.75);
+    }
+    main section.work-me {
+        padding: 20% 0 0 0;
+    }
+    .work-me .work-view .work-card .card-front {
+        text-align: center;
+        min-height: 45vh;
+    }
+    .work-me .work-view .work-card .card-front img {
+        width: 80%;
+        height: 100%;
+    }
+    .work-me .work-view .work-card .card-back .back-content h3 {
+        font-size: 95%;
+    }
+    .work-me .work-view .work-card .card-back .back-content p {
+        font-size: 95%;
+    }
+    main section.contact-me {
+        padding: 20% 0 0 0;
+    }
+    .contact-me .content ul.social-links li a img {
+        height: 10%;
+        width: 10%;
+    }
+    .contact-me .content p {
+        font-size: 95%;
+    }
+    section.support p {
+        font-size: 95%;
+    }
+    footer p {
+        font-size: 75%;
+    }
+    .scroll-up img {
+        transform: scale(0.75);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .menu-bar a span {
+        font-size: 90%;
+    }
+    .menu-bar a img {
+        height: auto;
+        width: 4%;
+    }
+    main section.homepage {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .home-text-container, .typing-text {
+        min-width: 50%;
+    }
+    .homepage figure {
+        width: 100%;
+        height: 100%;
+    }
+    .about-me .description .content p {
+        font-size: 75%;
+    }
+    .about-me .description .content ul.social-links li a img {
+        height: 9%;
+        width: 9%;
+        padding: 0 1%;
+    }
+    .about-me .description .tech-stack h4 {
+        transform: scale(0.75);
+    }
+    .work-me .work-view {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .work-me .work-view .work-card {
+        width: 45%;
+        height: 50%;
+    }
+    .work-me .more-updates p {
+        font-size: 95%;
+        padding: 10% 0;
+    }
+    .contact-me .content ul.social-links li a img {
+        height: 9%;
+        width: 9%;
+        padding: 0 1%;
+    }
+    footer p {
+        font-size: 70%;
+    }
+    .scroll-up img {
+        transform: scale(0.6);
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    main section > .heading {
+        transform: scale(0.5);
+        padding: 0 0 10% 0;
+    }
+
+    header, header.fix-h {
+        flex-wrap: nowrap;
+        padding: 2vh 5vw;
+    }
+    header .logo {
+        position: relative;
+    }
+    header .logo:hover {
+        color: #0cfcfc;
+    }
+    header.fix-h .logo {
+        position: relative;
+        font-size: 4vh;
+    }
+    header.fix-h .logo:hover {
+        color: #fc6d6d;
+    }
+    .toggle {
+        visibility: hidden;
+    }
+    header .menu-bar {
+        position: relative;
+        background: none;
+        left: 0;
+        top: 0;
+        flex-direction: row;
+        padding: 0;
+        height: auto;
+        width: auto;
+    }
+    .menu-bar a {
+        position: relative;
+        color: #fff;
+        display: inline-block;
+        padding: 0 1vw;
+        height: auto;
+        width: auto;
+    }
+    .menu-bar a span {
+        width: auto;
+        padding: 0;
+        vertical-align: middle;
+    }
+    .menu-bar a img {
+        filter: invert(1);
+        height: 3.5vh;
+        vertical-align: middle;
+        width: auto;
+    }
+    header nav a:after {
+        content: "";
+        position: absolute;
+        display: block;
+        background: #080;
+        left: 50%;
+        height: 2px;
+        width: 0;
+        bottom: -10%;
+        transition: width 0.5s ease, left 0.5s ease;
+        visibility: hidden;
+    }
+    header nav a:hover:after {
+        visibility: visible;
+        width: 100%;
+        left: 0;
+    }
+    header.fix-h nav a {
+        color: #000;
+    }
+    header.fix-h nav a img {
+        filter: invert(0);
+    }
+    header.fix-h nav a:hover {
+        background: linear-gradient(to bottom right, #f00, #0ff);
+        background-clip: text;
+        background: webkit-linear-gradient(to bottom right, #f00, #0ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    main section.homepage {
+        padding: 0;
+    }
+    .home-text-container {
+        transform: scale(1.5);
+    }
+
+    main section.about-me {
+        padding: 15% 0 0 0;
+    }
+    .about-me .description {
+        justify-content: center;
+    }
+    .about-me .description .content {
+        width: 40%;
+        background: #eee;
+        word-break: keep-all;
+        padding: 0 1vw;
+    }
+    .about-me .description .content p {
+        padding: 2vh 1vw;
+        font-size: 75%;
+    }
+    .about-me .description .content ul.social-links li a img {
+        height: 15%;
+        width: 15%;
+    }
+    .about-me .description .content ul.social-links li a img:hover {
+        transition: 0.5s;
+        transform: scale(1.2);
+    }
+    .about-me .description .tech-stack {
+        visibility: hidden;
+        position: absolute;
+    }
+    .about-me .description .tech-container {
+        grid-template: 10vh 10vh 10vh 10vh 10vh / 50% 50%;
+        grid-gap: 3vh 0;
+        padding: 2vw 0;
+        position: relative;
+        width: 45%;
+        height: auto;
+        align-content: center;
+    }
+    .about-me .description .tech-container .tech-box {
+        position: relative;
+        gap: 0.5vw;
+        padding: 0;
+        background: none;
+        min-height: 10vh;
+        overflow: hidden;
+    }
+    .about-me .description .tech-container .tech-box:hover {
+        background: #f2f4f4;
+    }
+    .about-me .description .tech-container .tech-box img {
+        position: relative;
+        height: 100%;
+        width: auto;
+    }
+    .about-me .description .tech-container .tech-box h3 {
+        position: relative;
+        font-family: monospace;
+        font-size: 90%;
+        padding: 0;
+        align-self: center;
+    }
+
+    main section.work-me {
+        padding: 15% 0 0 0;
+    }
+    .work-me .work-view {
+        flex-direction: row;
+        margin: 0;
+        width: 100%;
+        height: 50vh;
+        gap: 5vw;
+        justify-content: center;
+    }
+    .work-me .work-view .work-card {
+        width: 20vw;
+        height: 100%;
+        transform-style: preserve-3d;
+        background: none;
+        padding: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .work-me .work-view .work-card .card-front,.work-me .work-view .work-card .card-back {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 2vw;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: transform 1s linear;
+        padding: 0;
+    }
+    .work-me .work-view .work-card .card-front img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1vw;
+    }
+    .work-me .work-view .work-card .card-front {
+        transform: perspective(500px) rotateY(0deg);
+    }
+    .work-me .work-view .work-card .card-back {
+        background: #fc6d6d;
+        transform: perspective(500px) rotateY(180deg);
+    }
+    .work-me .work-view .work-card .card-back .back-content {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-shadow: 0 0 3px #fff;
+        transform: perspective(500px) translateZ(1.5em);
+    }
+    .work-me .work-view .work-card .card-back .back-content h3 {
+        font-size: 2vw;
+        text-align: center;
+        word-break: keep-all;
+    }
+    .work-me .work-view .work-card .card-back .back-content p {
+        font-size: 1.5vw;
+        font-weight: 700;
+    }
+    .work-me .work-view .work-card .card-back .back-content p a {
+        color: #00f;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .work-me .work-view .work-card .card-back .back-content p a:hover {
+        color: #080;
+    }
+    .work-me .work-view .work-card:hover > .card-front {
+        transform: perspective(500px) rotateY(180deg);
+    }
+    .work-me .work-view .work-card:hover > .card-back {
+        transform: perspective(500px) rotateY(360deg);
+    }
+    .work-me .more-updates p a:hover {
+        color: #080;
+        text-decoration: underline;
+    }
+
+    main section.contact-me {
+        padding: 15% 0 0 0;
+    }
+    .contact-me .content p {
+        line-height: 10vh;
+        font-family: 'Poppins',serif;
+    }
+    .contact-me .content ul.social-links li a img {
+        height: auto;
+        width: 7.5vw;
+    }
+
+    section.support p a:hover {
+        text-decoration: underline;
+        color: #080;
+    }
+
+    /* ---------Scroll Up---------- */
+    .scroll-up {
+        right: 2vw;
+        transform: scale(0.75);
+        pointer-events: none;
+        cursor: default;
+    }
+    .show-scroll {
+        bottom: 6vh;
+    }
+    .scroll-up img {
+        pointer-events: auto;
+        cursor: pointer;
+    }
+    .scroll-up img:hover {
+        filter: opacity(1);
+    }
+
+    /* ---------Footer---------- */
+    footer {
+        height: 5vw;
+        font-size: 2.5vw;
+    }
+
+    /* ---------Scroll Bar---------- */
+    ::-webkit-scrollbar {
+        width: 0.5vw;
+        background: #000;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1vw;
+        background: #f2f4f4;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #0ff;
+    }
+}
