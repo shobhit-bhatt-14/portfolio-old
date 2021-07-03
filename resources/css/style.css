@@ -194,7 +194,7 @@ main section.homepage {
     height: 100%;
     background: #343f4f;
     border-left: 2px solid #fc6d6d;
-    animation: m-slide 4s steps(120) infinite;
+    animation: m-slide 4s steps(20) infinite;
 }
 @keyframes m-slide {
     45% {
